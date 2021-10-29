@@ -1,1 +1,7 @@
-{}
+{
+    "baseUrl": "https://www.saucedemo.com/",
+    "ignoreTestFiles": [],
+    "viewportHeight": 764,
+    "viewportWidth": 1024,
+    "chromeWebSecurity": false
+}
