@@ -6,10 +6,10 @@ This project created for fulfilling midsemester assignment of Pengujian Perangka
 </p>
 
 ## 👥 The Team
-There are 5 persons from **TI-3D** involved in this project, consists of:
+There are 5 persons from **Kelompok 1 TI-3D** involved in this project, consists of:
 - I Made Genadi Dharma Slawa(1941720070)
 - Khosy Robbin Hood(1941720067)
-- Muhammad Ridho Ramadhan(1941720067)
+- Muhammad Ridho Ramadhan(1941720149)
 - Reynaldi Ramadhani Eka Purnomo(1941720142)
 - Rizkina Hayyuni Putri(1941720008)
 
