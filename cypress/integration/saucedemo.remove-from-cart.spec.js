@@ -19,6 +19,7 @@ describe('Remove Barang dari Cart', () => {
         cartAction('list', 'add', [0])
         cartAction('list', 'remove', [0])
 
+        //asserting the button of first item should have 'Add to cart' Button
         cy.get('.inventory_item')
             .find('button')
             .eq(0)
@@ -29,6 +30,7 @@ describe('Remove Barang dari Cart', () => {
         cartAction('detail', 'add', 0)
         cartAction('detail', 'remove', 0)
 
+        //asserting the button of first item in detail page should have 'Add to cart' Button
         cy.get('.inventory_details')
             .contains('Add to cart', {matchCase: false})
             .should('have.text', 'Add to cart')
@@ -38,6 +40,7 @@ describe('Remove Barang dari Cart', () => {
         cartAction('list', 'add', [0])
         cartAction('cart', 'remove', [0], 1)
 
+        //asserting the shopping cart badge element shouldn't exist
         cy.get('.shopping_cart_badge')
             .should('not.exist')
     })
@@ -46,6 +49,7 @@ describe('Remove Barang dari Cart', () => {
         cartAction('list', 'add', [0, 4])
         cartAction('cart', 'remove', [0], 1)
 
+        //asserting the checkout item only 'Sauce Labs Backpack'
         cy.get('.cart_item')
             .find('.inventory_item_name')
             .should('have.text', 'Sauce Labs Backpack')
@@ -55,6 +59,7 @@ describe('Remove Barang dari Cart', () => {
         cartAction('list', 'add', [0, 4])
         cartAction('cart', 'remove', [0, 4], 2)
 
+        //asserting the shopping cart badge element shouldn't exist
         cy.get('.shopping_cart_badge')
             .should('not.exist')
     })
@@ -62,17 +67,17 @@ describe('Remove Barang dari Cart', () => {
 })
 
 function login(username, password) {
-	// Type username field, and wait 1s
+	// Type username field
 	cy.get('#user-name')
 		.type(username)
 		.wait(500)
 
-	// Type password field, and wait 1s
+	// Type password field
 	cy.get('#password')
 		.type(password, {log: false})
 		.wait(500)
 
-	// Click Login button, and wait 2s
+	// Click Login button
 	cy.get('#login-button')
 		.click()
 		.wait(1000)
