@@ -49,7 +49,7 @@ describe('Login Page - Login Test', () => {
     });
 
     // Test 6
-    it.only('Problem User', () => {
+    it('Problem User', () => {
         cy.get('#user-name').type('problem_user')
         cy.get('#password').type('secret_sauce')
         cy.get('#login-button').click()
