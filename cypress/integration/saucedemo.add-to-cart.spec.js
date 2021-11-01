@@ -23,4 +23,12 @@ describe('Add Barang Ke Chart', () => {
 
     })
 
+    it('Pilih 1 barang di menu secara langsung', () => {
+        cy.get('#add-to-cart-sauce-labs-onesie').click();
+        cy.get('.shopping_cart_link').click();
+
+    })
+
+    
+
 })
