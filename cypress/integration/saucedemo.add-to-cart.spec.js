@@ -6,11 +6,14 @@
 
 /// <reference types="cypress"/>
 
-describe('YOUR_TEST_CASE', () => {
+describe('Add Barang Ke Chart', () => {
 
     beforeEach(() => {
         // The step you'll always run every scenario, eg: Login
         cy.visit(Cypress.config().baseUrl)
+        cy.get('#user-name').type('standard_user')
+        cy.get('#password').type('secret_sauce')
+        cy.get('#login-button').click();
         
     })
 
