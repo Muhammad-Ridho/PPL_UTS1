@@ -29,6 +29,20 @@ describe('Add Barang Ke Chart', () => {
 
     })
 
+    it('Pilih 2 barang di menu secara langsung', () => {
+        cy.get('#add-to-cart-sauce-labs-fleece-jacket').click();
+        cy.get('#add-to-cart-sauce-labs-bolt-t-shirt').click();
+        cy.get('.shopping_cart_link').click();
+
+    })
+
+    it('Pilih salah satu menu untuk menampilkan barang', () => {
+        cy.get('.inventory_item').contains('Sauce Labs Onesie').click();
+        cy.get('.inventory_details').contains('Add to cart').click();
+        cy.get('.shopping_cart_link').click();
+
+    })
+
     
 
 })
