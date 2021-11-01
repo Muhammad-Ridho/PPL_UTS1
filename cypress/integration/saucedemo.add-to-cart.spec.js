@@ -43,6 +43,13 @@ describe('Add Barang Ke Chart', () => {
 
     })
 
+    it('Pilih salah satu menu untuk menampilkan barang', () => {
+        cy.get('.inventory_item').contains('Sauce Labs Bike Light').click();
+        cy.get('.inventory_details').contains('Add to cart').click();
+        cy.get('.shopping_cart_link').click();
+
+    })
+
     
 
 })
