@@ -17,7 +17,9 @@ describe('Add Barang Ke Chart', () => {
         
     })
 
-    it('YOUR_SCENARIO', () => {
+    it('Pilih 1 barang di menu secara langsung', () => {
+        cy.get('#add-to-cart-sauce-labs-bike-light').click();
+        cy.get('.shopping_cart_link').click();
 
     })
 
