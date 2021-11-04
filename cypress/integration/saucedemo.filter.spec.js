@@ -7,19 +7,11 @@
 /// <reference types="cypress"/>
 
 describe('Filter Barang', () => {
-    const username = 'standard_user'
-    const password = 'secret_sauce'
 
     beforeEach(() => {
         // The step you'll always run every scenario, eg: Login
-        cy.visit('https://www.saucedemo.com/');
-
-        cy.get('#user-name').type(username);
-        cy.get('#password').type(password);
-
-        cy.get('#login-button').click();
-
-        cy.get('#inventory_container').contains('Sauce Labs Backpack').should('be.visible');
+        cy.visit(Cypress.config().baseUrl)
+        login('standard_user', 'secret_sauce')
     })
 
     it('Filter dengan Name(A to Z)', () => {
