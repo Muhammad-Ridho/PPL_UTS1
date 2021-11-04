@@ -7,11 +7,17 @@
 /// <reference types="cypress"/>
 
 describe('Filter Barang', () => {
+    const username = 'standard_user'
+    const password = 'secret_sauce'
 
     beforeEach(() => {
         // The step you'll always run every scenario, eg: Login
         cy.visit(Cypress.config().baseUrl)
-        login('standard_user', 'secret_sauce')
+
+        cy.get('#user-name').type(username);
+        cy.get('#password').type(password);
+
+        cy.get('#login-button').click();
     })
 
     it('Filter dengan Name(A to Z)', () => {
