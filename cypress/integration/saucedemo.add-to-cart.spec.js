@@ -1,6 +1,6 @@
 /*
-    Nama    : YOUR_NAME
-    NIM     : YOUR_NIM
+    Nama    : MUHAMMAD RIDHO RAMDAHAN
+    NIM     : 1941720149
     Kelas   : TI-3D
 */
 
