@@ -9,14 +9,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Delete node_module
-        run: rm package-lock.json
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Update dependencies
-        run: npm update
+      - name: Init cypress
+        run: npm init -y
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
