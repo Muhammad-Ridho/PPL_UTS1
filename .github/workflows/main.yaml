@@ -9,14 +9,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Clear Cache
-        run: npm cache clean --force
-
       - name: Delete node_module
-        run: rm -rf node_modules
+        run: rm package-lock.json
 
       - name: Install dependencies
         run: npm install
+
+      - name: Update dependencies
+        run: npm update
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
