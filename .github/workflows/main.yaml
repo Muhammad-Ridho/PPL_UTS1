@@ -9,6 +9,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Clear Cache
+        run: npm cache clean --force
+
+      - name: Delete node_module
+        run: rm -rf node_modules
+
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
