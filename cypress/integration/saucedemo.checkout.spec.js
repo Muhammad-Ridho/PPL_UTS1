@@ -45,7 +45,7 @@ describe('CHECKOUT_TEST_CASE', () => {
         cy.get('#finish').click();
 
         // assertion
-        cy.get('.complete-header').should('not.have.text','THANK YOU FOR YOUR ORDER')
+        cy.get('.complete-header').should('have.text','THANK YOU FOR YOUR ORDER')
     })
 
     it('checkout_normal_input_data', () => {
